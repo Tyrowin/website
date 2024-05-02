@@ -1,21 +1,28 @@
-import { BlogPosts } from 'app/components/posts'
+import { BlogPosts } from 'app/components/posts';
 
 export default function Page() {
-  return (
-    <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
-      </h1>
-      <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
-      </p>
-      <div className="my-8">
-        <BlogPosts />
-      </div>
-    </section>
-  )
+    return (
+        <section>
+            <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+                Malte Mindedal | Portfolio
+            </h1>
+            <p>
+                Hey! I'm Malte.
+            </p>
+            <br></br>
+            <p className="mb-4">
+                {`I'm a new developer from Sweden. I mostly working with Python and a little C++.
+                  I enjoy learning new things and I'm always looking for new projects to work on,
+                  currently i'm learning web development with HTML, CSS and JavaScript.
+          `}
+            </p>
+            <p>
+                Connect with be on Linkedin!
+            </p>
+            <br></br>
+            <div className="my-8">
+                <BlogPosts />
+            </div>
+        </section>
+    );
 }
