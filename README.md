@@ -1,16 +1,8 @@
-# Portfolio Blog Starter
+# Personal Portfolio + Blog
 
-This is a porfolio site complete with a blog. Includes:
+This is a personal portfolio and blog website built with Next.js and TypeScript. It is a work in progress and will be updated as I learn more about web development. 
 
-- MDX and Markdown support
-- Optimized for SEO (sitemap, robots, JSON-LD schema)
-- RSS Feed
-- Dynamic OG images
-- Syntax highlighting
-- Tailwind v4
-- Vercel Speed Insights / Web Analytics
-- Geist font
-
+Currently the website contains, a short bio, a blog, links to contact me, and my resume.
 
 ## How to Use
 
