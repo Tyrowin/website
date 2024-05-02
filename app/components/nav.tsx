@@ -7,12 +7,6 @@ const navItems = {
     '/blog': {
         name: 'blog',
     },
-    'https://www.linkedin.com/in/malte-mindedal-64a874161/': {
-        name: 'linkedin',
-    },
-    '/resume.pdf': {
-        name: 'resume',
-    },
 };
 
 export function Navbar() {
