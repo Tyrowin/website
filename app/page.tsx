@@ -19,7 +19,7 @@ export default function Page() {
             </p>
             <p className="mb-4">
                 Want to know more? Use the links below to find me on social
-                media, blog or check out my resume.
+                media, read about my projects or check out my resume.
             </p>
             <div className="my-8">
                 <BlogPosts />
