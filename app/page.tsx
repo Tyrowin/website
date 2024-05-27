@@ -3,23 +3,18 @@ import { BlogPosts } from 'app/components/posts';
 export default function Page() {
     return (
         <section>
-            <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-                Malte Mindedal | Developer
+            <h1 className="mb-1 text-3xl font-semibold tracking-tighter">
+                Malte Mindedal
             </h1>
-            <p className="mb-4">
-                {`I'm a student and new developer from Sweden. I mostly code in Python and JavaScript.
-                  I enjoy learning new things and I'm always looking for new projects to work on.
-                `}
+            <h1 className="mb-1 text-2xl  tracking-tighter">
+                Junior Developer / Student / Intern at Stena Fastigheter
+            </h1>
+            <hr className="mb-3" />
+            <p className="mb-2 text-lg tracking-tighter">
+                Junior Developer with a passion for backend development. Currently studying IoT-development at kyh in Gothenburg.
             </p>
-            <p className="mb-4">
-                {`Im currently an intern at Stena Fastigheter in Gothenburg, 
-                  Sweden, where i've been working mostly with Python and Azure Cloud Services. 
-                `}
-            </p>
-            <p className="mb-4">
-                {`Want to know more? Use the links below to find me on social
-                media, read about my projects or check out my resume.
-                `}
+            <p className="text-lg tracking-tighter">
+                Want to know more? Check out projects I've worked on below or use the links in the navigation bar.
             </p>
             <div className="my-8">
                 <BlogPosts />

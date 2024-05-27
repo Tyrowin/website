@@ -26,7 +26,7 @@ export default function Footer() {
                         target="_blank"
                         href="/rss"
                     >
-                        <ArrowIcon />
+                        <ArrowIcon/>
                         <p className="ml-2 h-7">rss</p>
                     </a>
                 </li>
@@ -37,7 +37,7 @@ export default function Footer() {
                         target="_blank"
                         href="https://github.com/Tyrowin"
                     >
-                        <ArrowIcon />
+                        <ArrowIcon/>
                         <p className="ml-2 h-7">github</p>
                     </a>
                 </li>
@@ -48,7 +48,7 @@ export default function Footer() {
                         target="_blank"
                         href="https://www.linkedin.com/in/malte-mindedal-64a874161/"
                     >
-                        <ArrowIcon />
+                        <ArrowIcon/>
                         <p className="ml-2 h-7">linkedin</p>
                     </a>
                 </li>
@@ -59,7 +59,7 @@ export default function Footer() {
                         target="_blank"
                         href="https://github.com/Tyrowin/portfolio"
                     >
-                        <ArrowIcon />
+                        <ArrowIcon/>
                         <p className="ml-2 h-7">view source code</p>
                     </a>
                 </li>
@@ -69,7 +69,7 @@ export default function Footer() {
                         href="/resume.pdf"
                         download
                     >
-                        <ArrowIcon />
+                        <ArrowIcon/>
                         <p className="ml-2 h-7">download resume</p>
                     </a>
                 </li>
