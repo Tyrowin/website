@@ -1,7 +1,7 @@
-import { notFound } from 'next/navigation';
-import { CustomMDX } from 'app/components/mdx';
-import { formatDate, getBlogPosts } from 'app/projects/utils';
-import { baseUrl } from 'app/sitemap';
+import {notFound} from 'next/navigation';
+import {CustomMDX} from 'app/components/mdx';
+import {formatDate, getBlogPosts} from 'app/projects/utils';
+import {baseUrl} from 'app/sitemap';
 
 export async function generateStaticParams() {
     let posts = getBlogPosts();
@@ -11,9 +11,10 @@ export async function generateStaticParams() {
     }));
 }
 
-export function generateMetadata({ params }) {
+export function generateMetadata({params}) {
     let post = getBlogPosts().find((post) => post.slug === params.slug);
     if (!post) {
+        // @ts-ignore
         return;
     }
 
@@ -51,7 +52,7 @@ export function generateMetadata({ params }) {
     };
 }
 
-export default function Blog({ params }) {
+export default function Blog({params}) {
     let post = getBlogPosts().find((post) => post.slug === params.slug);
 
     if (!post) {
@@ -74,8 +75,8 @@ export default function Blog({ params }) {
                         image: post.metadata.image
                             ? `${baseUrl}${post.metadata.image}`
                             : `/og?title=${encodeURIComponent(
-                                  post.metadata.title
-                              )}`,
+                                post.metadata.title
+                            )}`,
                         url: `${baseUrl}/blog/${post.slug}`,
                         author: {
                             '@type': 'Person',
@@ -93,7 +94,7 @@ export default function Blog({ params }) {
                 </p>
             </div>
             <article className="prose">
-                <CustomMDX source={post.content} />
+                <CustomMDX source={post.content}/>
             </article>
         </section>
     );

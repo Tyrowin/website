@@ -18,7 +18,7 @@ export function Navbar() {
                     id="nav"
                 >
                     <div className="flex flex-row space-x-0 pr-10">
-                        {Object.entries(navItems).map(([path, { name }]) => {
+                        {Object.entries(navItems).map(([path, {name}]) => {
                             if (name === 'resume') {
                                 return (
                                     <a
