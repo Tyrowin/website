@@ -1,25 +1,57 @@
-import {BlogPosts} from 'app/components/posts';
+import Link from "next/link";
+import React from "react";
+import Particles from "./components/particles";
 
-export default function Page() {
-    return (
-        <section>
-            <h1 className="mb-1 text-3xl font-semibold tracking-tighter">
-                Malte Mindedal
-            </h1>
-            <h1 className="mb-1 text-2xl  tracking-tighter">
-                Junior Developer / Student / Intern at Stena Fastigheter
-            </h1>
-            <hr className="mb-3"/>
-            <p className="mb-2 text-lg tracking-tighter">
-                Junior Developer with a passion for backend development. Currently studying IoT-development at kyh in
-                Gothenburg.
-            </p>
-            <p className="text-lg tracking-tighter">
-                Want to know more? Check out projects I've worked on below or use the links in the navigation bar.
-            </p>
-            <div className="my-8">
-                <BlogPosts/>
-            </div>
-        </section>
-    );
+const navigation = [
+  {
+    name: 'Resume',
+    href: '/resume.pdf',
+    as: 'a',
+    download: 'resume.pdf',
+    rel: 'noopener noreferrer',
+    target: '_blank',
+  },
+  { name: 'Contact', href: '/contact' },
+];
+
+export default function Home() {
+  return (
+    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+      <nav className="my-16 animate-fade-in">
+        <ul className="flex items-center justify-center gap-4">
+          {navigation.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
+              target={item.name === 'Projects' ? '_blank' : '_self'}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </ul>
+      </nav>
+      <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+      <Particles className="absolute inset-0 -z-10 animate-fade-in" quantity={100} />
+      <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+        Tyrowin
+      </h1>
+
+      <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+      <div className="my-16 text-center animate-fade-in">
+        <h2 className="text-sm text-zinc-500 ">
+          What am i doing now? Well most of it is {' '}
+          <Link
+            target="_blank"
+            href="https://github.com/Tyrowin"
+            className="underline duration-500 hover:text-zinc-300"
+          >
+            here
+          </Link>
+          .
+        </h2>
+      </div>
+    </div>
+  );
+
 }

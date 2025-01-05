@@ -1,66 +1,63 @@
-import './global.css';
-import type {Metadata} from 'next';
-import {GeistSans} from 'geist/font/sans';
-import {GeistMono} from 'geist/font/mono';
-import {Navbar} from './components/nav';
-import {Analytics} from '@vercel/analytics/react';
-import {SpeedInsights} from '@vercel/speed-insights/next';
-import Footer from './components/footer';
-import {baseUrl} from './sitemap';
+import '../global.css';
+import { Inter } from 'next/font/google';
+import LocalFont from 'next/font/local';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    metadataBase: new URL(baseUrl),
-    title: {
-        default: 'Malte Mindedal | Developer',
-        template: '%s | Portfolio',
+  title: {
+    default: 'Tyrowin.dev',
+    template: '%s | tyrowin.dev',
+  },
+  description: 'Junior backend developer with a passion for problem solving.',
+  openGraph: {
+    title: 'tyrowin.dev',
+    description: 'Junior backend developer with a passion for problem solving.',
+    url: 'https://tyrowin.dev',
+    siteName: 'tyrowin.dev',
+    locale: 'en-US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
-    description: 'This is my portfolio.',
-    openGraph: {
-        title: 'Malte Mindedal | Developer',
-        description: 'Personal website of Malte Mindedal',
-        url: baseUrl,
-        siteName: 'Portfolio',
-        locale: 'en_US',
-        type: 'website',
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
-        },
-    },
+  },
+  twitter: {
+    title: 'Tyrowin',
+    card: 'summary_large_image',
+  },
+  icons: {
+    shortcut: '/favicon.png',
+  },
+  metadataBase: new URL('https://tyrowin.dev'),
 };
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 
-const cx = (...classes) => classes.filter(Boolean).join(' ');
+const calSans = LocalFont({
+  src: '../public/fonts/CalSans-SemiBold.ttf',
+  variable: '--font-calsans',
+});
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode;
-}) {
-    return (
-        <html
-            lang="en"
-            className={cx(
-                'text-black bg-white dark:text-white dark:bg-black',
-                GeistSans.variable,
-                GeistMono.variable
-            )}
-        >
-        <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-            <Navbar/>
-            {children}
-            <Footer/>
-            <Analytics/>
-            <SpeedInsights/>
-        </main>
-        </body>
-        </html>
-    );
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={[inter.variable, calSans.variable].join(' ')}>
+      <head>{/* Analytics component removed */}</head>
+      <body
+        className={`bg-black ${
+          process.env.NODE_ENV === 'development' ? 'debug-screens' : undefined
+        }`}
+      >
+        {children}
+      </body>
+    </html>
+  );
 }

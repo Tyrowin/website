@@ -1,31 +1,34 @@
-# Personal Portfolio + Blog
+<div align="center">
+    <h1 align="center">tyrowin.dev</h1></a>
 
-This is a personal portfolio and blog website built with Next.js and TypeScript. It is a work in progress and will be updated as I learn more about web development.
+My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Contentlayer](https://www.contentlayer.dev/) and deployed to [Vercel](https://vercel.com/).
 
-Currently the website contains, a short bio, a blog, links to contact me, and my resume.
+!! WIP - Current build isnt deployed yet!!
 
-## How to Use
+</div>
 
-You can choose from one of the following two methods to use this repository:
+<br/>
 
-### Clone and Deploy
+## Running Locally
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
 
-Then, navigate into your new project directory:
-
-```bash
-cd portfolio
+```sh-session
+git clone https://github.com/Tyrowin/website.git
+cd website
 ```
 
-Install the dependencies:
-
-```bash
+Install dependencies and run the development server:
+```sh-session
 pnpm install
+pnpm dev
 ```
 
-Finally, run Next.js in development mode:
 
-```bash
-pnpm dev
+## Cloning / Forking
+
+Please remove all personal information before deploying your own version of this site.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
 ```
