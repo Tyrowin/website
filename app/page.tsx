@@ -4,7 +4,7 @@ import Particles from "./components/particles";
 
 const navigation = [
   {
-    name: 'Resume',
+    name: 'Resumé',
     href: '/resume.pdf',
     as: 'a',
     download: 'resume.pdf',

@@ -16,7 +16,7 @@ export const Navigation: React.FC = () => {
   }, []);
 
   const navigation = [
-    { name: 'Resume', href: '/resume.pdf', download: true },
+    { name: 'Resumé', href: '/resume.pdf', download: true },
     { name: 'Contact', href: '/contact' },
   ];
 
